@@ -1,0 +1,93 @@
+/* I need to know why we reset... */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* wrapper Styles */
+.wrapper {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* nav Styles */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    gap: 1.5rem;
+}
+nav a {
+    text-decoration: none;
+    color: #696969;
+    
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav span {
+    color: #696969;
+    padding: 0.4rem;
+}
+nav .apps-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+nav .apps-btn:hover{
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+nav .btn {
+    background-color: #1868d1;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 2rem;
+}
+nav .btn:hover {
+    box-shadow: #696969 0px 0px 5px;
+    cursor: pointer;
+}
+
+/* footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    justify-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #696969;
+    background-color: #e9e9e9;
+    gap:0
+}
+footer .top-section {
+    font-size: 1rem;
+    text-decoration: none;
+    gap: 1rem;
+}
+footer .bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.left {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+footer a {
+    text-decoration: none;
+    color: #696969;
+}
