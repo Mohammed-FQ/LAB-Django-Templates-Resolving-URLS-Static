@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apps" />
-    <link href="/static/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apps,search" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <div class="wrapper">
         <nav class="nav">
-            <a href="#">Gmail</a>
-            <a href="#">Images</a>
+            <a href="https://workspace.google.com/intl/en-US/gmail/">Gmail</a>
+            <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
             <button class ="apps-btn">
                 <span class="material-symbols-outlined">apps</span>
             </button>
-            <button class="btn">Sign in</button>
+            <a class="btn" href="https://accounts.google.com/v3/signin/accountchooser?continue=https%3A%2F%2Fwww.google.com%2F&dsh=S-1912498671%3A1775303542616165&ec=futura_exp_og_so_72776762_e&hl=en&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_X0DuD-XY7iDD_S50cDxOphWhIZUgCVNy8Z5lycoB2Wpx_18eDP9gCLKdikqWLWVzoh2FdXZg">Sign in</a>
+            <!-- https://accounts.google.com/v3/signin/accountchooser?continue=https%3A%2F%2Fwww.google.com%2F&dsh=S-1912498671%3A1775303542616165&ec=futura_exp_og_so_72776762_e&hl=en&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AT1y2_X0DuD-XY7iDD_S50cDxOphWhIZUgCVNy8Z5lycoB2Wpx_18eDP9gCLKdikqWLWVzoh2FdXZg -->
         </nav> <!-- End Nav -->
      <main>
             {% block content %}
@@ -26,18 +31,20 @@
         <section class="top-section">
             <h4>Saudi Arabia</h4>
         </section>
+        <section class = "line"></section>
         <section class="bottom-section">
             <div class="left">
-                <a href="#">About</a>
-                <a href="#">Advertising</a>
-                <a href="#">Business</a>
-                <a href="#">How Search works</a>
+                <a href="https://about.google/?utm_source=google-SA&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                <a href="https://business.google.com/en-all/google-ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a href="https://business.google.com/en-all/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a>
             </div>
             <div class="right">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
+                <a href="https://policies.google.com/privacy?hl=en-SA&fg=1">Privacy</a>
+                <a href="{% url 'main:terms_view' %}">Terms</a>
                 <a href="#">Settings</a>
             </div>
+        </section>
     </footer><!-- End Footer -->
     </div> <!-- End Wrapper -->
 </body>

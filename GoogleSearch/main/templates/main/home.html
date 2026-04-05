@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    yo
-    
-</body>
-</html>
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Google{% endblock %} 
+{% block content %}
+<div class="main-top">
+  <img src="{% static 'images/google-logo.png' %}" alt="Google Logo" />
+</div><!-- End Main Top -->
+<div class="main-middle">
+  <form class="search-form" action="https://www.google.com/search" method="get">
+    <div class="search-box">
+      <button type="submit" aria-label="Search icon">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <input type="text" name="q" placeholder="Search Google or type a URL" />
+      <button type="button" aria-label="Voice Search">
+        <img src="{% static 'images/mircophone.png' %}" alt="Voice Search" />
+      </button>
+      <button type="button" aria-label="Camera Search">
+        <img src="{% static 'images/camera.png' %}" alt="Camera Search" />
+      </button>
+    </div> <!-- End Search Box -->
+    <div class="buttons">
+      <button type="submit">Google Search</button>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">I'm Feeling Lucky</a>
+    </div><!-- End Buttons -->
+  </form>
+</div> <!-- End Main Middle -->
+
+<div class="main-bottom">
+    <h5>Google offered in: <a href="#">العربية</a></h5>
+</div><!-- End Main Bottom -->
+
+{% endblock %}
