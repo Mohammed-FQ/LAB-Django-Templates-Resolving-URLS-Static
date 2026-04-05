@@ -19,7 +19,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: right;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     font-size: 0.8rem;
     gap: 1.5rem;
 }
@@ -63,7 +63,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin-top: auto; /* makes it stuck to bootom */
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     font-size: 0.8rem;
     color: #5b7183;
     background-color: #f2f2f2;
@@ -106,7 +106,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     font-size: 0.8rem;
 }
 main .main-top img{
@@ -177,7 +177,7 @@ main .main-middle .search-box img{
     cursor: pointer;
 }
 main .main-bottom {
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     font-size: 0.8rem;
     text-decoration: none;
     color: #5b7183;
@@ -197,7 +197,7 @@ main .main-bottom a:hover {
     max-width: 980px;
     margin: 0 auto;
     padding: 3rem 1.5rem 5rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     font-size: 1rem;
     text-align: left;
 }
