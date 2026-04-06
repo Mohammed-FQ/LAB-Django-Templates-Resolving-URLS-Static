@@ -27,6 +27,10 @@
     <footer>
         <section class="top-section">
             <h4>Saudi Arabia</h4>
+            <div class="display-mode">    
+                <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" class="light-mode-toggle"><span class="material-symbols-outlined {% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} active-icon {% endif %}">light_mode</span></a>
+                <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" class="dark-mode-toggle"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} active-icon {% endif %}">dark_mode</span></a>
+            </div>
         </section>
         <section class = "line"></section>
         <section class="bottom-section">
@@ -37,10 +41,6 @@
                 <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a>
             </div>
             <div class="right">
-                <div class="display-mode d-flex align-items-center gap-1">    
-                <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" class="nav-link"><span class="material-symbols-outlined {% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} active-icon {% endif %}">light_mode</span></a>
-                <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" class="nav-link"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} active-icon {% endif %}">dark_mode</span></a>
-              </div>
                 <a href="https://policies.google.com/privacy?hl=en-SA&fg=1">Privacy</a>
                 <a href="{% url 'main:terms_view' %}">Terms</a>
                 <a href="#">Settings</a>
